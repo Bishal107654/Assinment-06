@@ -126,24 +126,7 @@ const showNewsByCategories = (plants) => {
     });
 
     // Add to Cart
-    document.querySelectorAll(".add-btn").forEach(btn => {
-        btn.addEventListener("click", (e) => {
-            const name = e.target.closest("button").getAttribute("data-name");
-            const price = parseInt(e.target.closest("button").getAttribute("data-price"));
-            addToCart(name, price);
-        });
-    });
-
-    // Modal on name click
-    document.querySelectorAll(".plant-title").forEach(title => {
-        title.addEventListener("click", (e) => {
-            modalTitle.textContent = e.target.getAttribute("data-name");
-            modalDescription.textContent = e.target.getAttribute("data-description");
-            modalImage.src = e.target.getAttribute("data-image");
-            modalCategory.textContent = e.target.getAttribute("data-category");
-            modalPrice.textContent = `$${e.target.getAttribute("data-price")}`;
-            plantModal.showModal();
-        });
+  
     });
 };
 
